@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
     <div class="container">
-        <a href="" class="navbar-brand">ABNATION</a>
+        <a href="" class="navbar-brand">{{ Str::ucfirst(Auth::user()->fname) }}</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,32 +16,14 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown mr-2 user">
                     <a href="#" class="nav-link" data-toggle="dropdown">
-                        <i class="fa fa-bell text-white">&nbsp;&nbsp;
-                            <span class="badge badge-danger pending">12</span>
+                        <i class="fa fa-bell text-white">
+                            <span class="badge badge-danger pending">0</span>
                         </i>
                     </a>
-                 
-                </li>   
-                <div id="messages">
-                     
-                </div>
-                    
+                </li>    
             </ul>
 
-
-
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown mr-3">
-                    <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <i class="fas fa-user"></i> Welcome
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="" class="dropdown-item"><i class="fas fa-user-circle"></i> Profile
-                        </a>
-                        <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item">
                     <a href="{{route('logout')}}" class="nav-link"><i class="fas fa-user-times"></i> Logout</a>
                 </li>
