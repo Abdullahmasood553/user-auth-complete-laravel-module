@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Message;
-use App\Models\Business;
 use Auth;
 use DB;
-use Pusher\Pusher;
 
 class UserController extends Controller
 {
