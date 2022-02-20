@@ -17,8 +17,10 @@ class UserController extends Controller
         return view('pages.register');
     }
 
-    public function dashboard() {          
-        return view('dashboard');
+    public function dashboard() {     
+        $notifications = DB::select("SELECT users.id, users.fname, users.lname, users.email, COUNT(is_read) AS unread FROM users LEFT JOIN messages ON users.id = messages.from AND messages.is_read = 0 WHERE users.id = ".Auth::id()." GROUP BY users.id, users.fname, users.lname, users.email");
+         
+        return view('dashboard', compact('notifications', $notifications));
     }
 
     public function save_register(Request $request)
