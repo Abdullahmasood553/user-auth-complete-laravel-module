@@ -14,17 +14,13 @@
 
 
             <ul class="navbar-nav mr-auto">
-                @foreach($notifications as $key)
-                <li class="nav-item dropdown mr-2" id="{{ $key->id }}">
+                <li class="nav-item dropdown mr-2">
                     <a href="#" class="nav-link" data-toggle="dropdown">
                         <i class="fa fa-bell text-white">
-                            @if($key->unread)
-                            <span class="badge badge-danger pending">{{ $key->unread }}</span>
-                            @endif
+                            <span class="badge badge-danger">0</span>
                         </i>
                     </a>
                 </li>   
-                @endforeach 
             </ul>
 
             <ul class="navbar-nav ml-auto">
